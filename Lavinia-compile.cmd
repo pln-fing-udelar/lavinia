@@ -1,0 +1,1 @@
+@java -cp "%~dp0/src;%~dp0/bin;z:/gwt-windows-1.2.22/gwt-user.jar;z:/gwt-windows-1.2.22/gwt-dev-windows.jar" com.google.gwt.dev.GWTCompiler -out "%~dp0/www" %* com.lavinia.gwt.user.Lavinia

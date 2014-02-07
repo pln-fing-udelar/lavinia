@@ -1,0 +1,9 @@
+com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException, true
+com.google.gwt.user.client.rpc.SerializableException, true
+com.lavinia.gwt.user.client.exceptions.ConfigurationException, true
+com.lavinia.gwt.user.client.exceptions.ExistsComponent, true
+com.lavinia.gwt.user.client.exceptions.FileNotFoundException, true
+com.lavinia.gwt.user.client.exceptions.ProcessingException, true
+com.lavinia.gwt.user.client.exceptions.XMLErrorException, true
+java.lang.Boolean, true
+java.lang.String, true

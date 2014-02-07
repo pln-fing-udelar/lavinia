@@ -1,0 +1,24 @@
+<module>
+
+	<!-- Inherit the core Web Toolkit stuff.                  -->
+	<inherits name='com.google.gwt.user.User'/>
+	<!-- Specify the app entry point class.                   -->
+	<entry-point class='com.lavinia.gwt.user.client.Lavinia'/>	
+	<servlet path='/IComponent' class='com.lavinia.gwt.user.server.IComponentImp'/>	
+	<servlet path='/IComponentsInfo' class='com.lavinia.gwt.user.server.IComponentsInfoImp'/>		
+	<servlet path='/IComponentsAnalysis' class='com.lavinia.gwt.user.server.IComponentsAnalysisImp'/>	
+	<servlet path='/IUtils' class='com.lavinia.gwt.user.server.IUtilsImp'/>				
+	<servlet path='/IResources' class='com.lavinia.gwt.user.server.IResourcesImp'/>	
+	<servlet path='/ITypes' class='com.lavinia.gwt.user.server.ITypesImp'/> 
+	<servlet path='/upload' class='com.lavinia.gwt.user.server.FileUploadServlet'/>
+	<servlet path='/uploadCorpus' class='com.lavinia.gwt.user.server.CorpusUploadServlet'/>
+	<servlet path='/uploadResource' class='com.lavinia.gwt.user.server.ResourceUploadServlet'/>
+	<servlet path='/uploadGResource' class='com.lavinia.gwt.user.server.GResourceUploadServlet'/>  
+	<servlet path='/downloadAE' class='com.lavinia.gwt.user.server.FileDownloadServlet'/>  
+	<servlet path='/uploadAE' class='com.lavinia.gwt.user.server.AEUploadServlet'/>  
+	<servlet path='/exportXML' class='com.lavinia.gwt.user.server.ExportXMLServlet'/>  
+	<servlet path='/uploadImport' class='com.lavinia.gwt.user.server.UploadImport'/>  
+	<servlet path='/uploadParams' class='com.lavinia.gwt.user.server.ParamsUploadServlet'/>  
+	<servlet path='/LoginHandler' class='com.lavinia.gwt.user.server.LoginHandler'/>  
+	
+</module>

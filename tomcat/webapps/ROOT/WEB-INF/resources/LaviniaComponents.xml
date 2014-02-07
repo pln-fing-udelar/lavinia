@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components>
+  <component simple="true">FreeLingAnnotator</component>
+  <component simple="true">POSTagger</component>
+  <component simple="true">ReglasContextuales</component>
+  <component simple="true">SentenceSplitter</component>
+  <component simple="true">Tokenizador</component>
+  <component simple="true">ShallowParser</component>
+  <component simple="false">FlujoRC</component>
+</components>
+

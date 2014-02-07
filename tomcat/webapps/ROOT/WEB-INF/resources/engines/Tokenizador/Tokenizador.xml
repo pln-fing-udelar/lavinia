@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>true</primitive>
+  <annotatorImplementationName>com.engines.Tokenizador.Tokenizador</annotatorImplementationName>
+  <analysisEngineMetaData>
+    <name>com.engines.Tokenizador</name>
+    <description>tokeniza el texto</description>
+    <version>1.0</version>
+    <vendor>freeling</vendor>
+    <configurationParameters>
+      <configurationParameter>
+        <name>Lenguaje</name>
+        <description>lenguaje del texto</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+    </configurationParameters>
+    <configurationParameterSettings />
+    <typeSystemDescription>
+      <name>Tokenizador.TypeSystem</name>
+      <description>TypeSystem</description>
+      <version>1.0</version>
+      <vendor>freeling</vendor>
+      <imports />
+      <types>
+        <typeDescription>
+          <name>com.engines.Token</name>
+          <description />
+          <supertypeName>uima.tcas.Annotation</supertypeName>
+          <features />
+        </typeDescription>
+      </types>
+    </typeSystemDescription>
+    <capabilities>
+      <capability>
+        <inputs />
+        <outputs>
+          <type allAnnotatorFeatures="true">com.engines.Token</type>
+        </outputs>
+        <languagesSupported />
+        <inputSofas />
+        <outputSofas />
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <externalResourceDependencies>
+    <externalResourceDependency>
+      <key>FreeLingExe</key>
+      <description>Ruta al archivo ejecutable de FreeLing</description>
+      <interfaceName />
+      <optional>false</optional>
+    </externalResourceDependency>
+    <externalResourceDependency>
+      <key>FreeLingConfEsp</key>
+      <description>Archivo de configuracion de FreeLing para espaniol.</description>
+      <interfaceName />
+      <optional>false</optional>
+    </externalResourceDependency>
+    <externalResourceDependency>
+      <key>FreeLingConfEng</key>
+      <description>Archivo de configuracion de FreeLing para ingles.</description>
+      <interfaceName />
+      <optional>false</optional>
+    </externalResourceDependency>
+    <externalResourceDependency>
+      <key>FreeLingConfIt</key>
+      <description>Archivo de configuracion de FreeLing para italiano.</description>
+      <interfaceName />
+      <optional>false</optional>
+    </externalResourceDependency>
+    <externalResourceDependency>
+      <key>FreeLingConfCat</key>
+      <description>Archivo de configuracion de FreeLing para catalan.</description>
+      <interfaceName />
+      <optional>false</optional>
+    </externalResourceDependency>
+  </externalResourceDependencies>
+  <resourceManagerConfiguration>
+    <externalResources>
+      <externalResource>
+        <name>FreeLingExe</name>
+        <description>Ruta al archivo ejecutable de FreeLing</description>
+        <fileResourceSpecifier>
+          <fileUrl>file:/C:/FreeLing-1.4/analyzer.exe</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName />
+      </externalResource>
+      <externalResource>
+        <name>FreeLingConfEsp</name>
+        <description>Archivo de configuracion de FreeLing para espaniol.</description>
+        <fileResourceSpecifier>
+          <fileUrl>file:/C:/FreeLing-1.4/data/config/es.cfg</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName />
+      </externalResource>
+      <externalResource>
+        <name>FreeLingConfEng</name>
+        <description>Archivo de configuracion de FreeLing para ingles.</description>
+        <fileResourceSpecifier>
+          <fileUrl>file:/C:/FreeLing-1.4/data/config/en.cfg</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName />
+      </externalResource>
+      <externalResource>
+        <name>FreeLingConfIt</name>
+        <description>Archivo de configuracion de FreeLing para italiano.</description>
+        <fileResourceSpecifier>
+          <fileUrl>file:/C:/FreeLing-1.4/data/config/it.cfg</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName />
+      </externalResource>
+      <externalResource>
+        <name>FreeLingConfCat</name>
+        <description>Archivo de configuracion de FreeLing para catalan.</description>
+        <fileResourceSpecifier>
+          <fileUrl>file:/C:/FreeLing-1.4/data/config/ca.cfg</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName />
+      </externalResource>
+    </externalResources>
+    <externalResourceBindings>
+      <externalResourceBinding>
+        <key>FreeLingExe</key>
+        <resourceName>FreeLingExe</resourceName>
+      </externalResourceBinding>
+      <externalResourceBinding>
+        <key>FreeLingConfEsp</key>
+        <resourceName>FreeLingConfEsp</resourceName>
+      </externalResourceBinding>
+      <externalResourceBinding>
+        <key>FreeLingConfEng</key>
+        <resourceName>FreeLingConfEng</resourceName>
+      </externalResourceBinding>
+      <externalResourceBinding>
+        <key>FreeLingConfIt</key>
+        <resourceName>FreeLingConfIt</resourceName>
+      </externalResourceBinding>
+      <externalResourceBinding>
+        <key>FreeLingConfCat</key>
+        <resourceName>FreeLingConfCat</resourceName>
+      </externalResourceBinding>
+    </externalResourceBindings>
+  </resourceManagerConfiguration>
+</analysisEngineDescription>
+

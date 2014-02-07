@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+    <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+    <primitive>false</primitive>
+    <delegateAnalysisEngineSpecifiers>
+        <delegateAnalysisEngine key="Tokenizador.0">
+            <import location="file:/Z:/gwt-windows-1.2.22/Lavinia/tomcat/webapps/ROOT/WEB-INF/resources/engines/Tokenizador/Tokenizador.xml"/>
+        </delegateAnalysisEngine>
+        <delegateAnalysisEngine key="FreeLingAnnotator.1">
+            <import location="file:/Z:/gwt-windows-1.2.22/Lavinia/tomcat/webapps/ROOT/WEB-INF/resources/engines/FreeLingAnnotator/FreeLingAnnotator.xml"/>
+        </delegateAnalysisEngine>
+        <delegateAnalysisEngine key="ReglasContextuales.2">
+            <import location="file:/Z:/gwt-windows-1.2.22/Lavinia/tomcat/webapps/ROOT/WEB-INF/resources/engines/ReglasContextuales/ReglasContextuales.xml"/>
+        </delegateAnalysisEngine>
+    </delegateAnalysisEngineSpecifiers>
+    <analysisEngineMetaData>
+        <name>FlujoRC</name>
+        <description>Tokenizador -&gt; FreeLingAnnotator -&gt; ReglasContextuales</description>
+        <version>1.0</version>
+        <vendor>Cecilia Techera</vendor>
+        <configurationParameters>
+            <configurationParameter>
+                <name>Tokenizador.Lenguaje.0</name>
+                <description>lenguaje del texto</description>
+                <type>String</type>
+                <multiValued>false</multiValued>
+                <mandatory>true</mandatory>
+                <overrides>
+                    <parameter>Tokenizador.0/Lenguaje</parameter>
+                </overrides>
+            </configurationParameter>
+            <configurationParameter>
+                <name>FreeLingAnnotator.Lenguaje.1</name>
+                <description>Lenguaje del texto a analizar.</description>
+                <type>String</type>
+                <multiValued>false</multiValued>
+                <mandatory>true</mandatory>
+                <overrides>
+                    <parameter>FreeLingAnnotator.1/Lenguaje</parameter>
+                </overrides>
+            </configurationParameter>
+            <configurationParameter>
+                <name>FreeLingAnnotator.Tagger.1</name>
+                <description>Tipo de tagger a utilizar. Puede ser utilizando Modelos de Markov Ocultos  o Etiquetado por Relajacion.</description>
+                <type>String</type>
+                <multiValued>false</multiValued>
+                <mandatory>true</mandatory>
+                <overrides>
+                    <parameter>FreeLingAnnotator.1/Tagger</parameter>
+                </overrides>
+            </configurationParameter>
+            <configurationParameter>
+                <name>FreeLingAnnotator.ReTokenizar.1</name>
+                <description>Retokenizar luego de aplicar el tagger.</description>
+                <type>Boolean</type>
+                <multiValued>false</multiValued>
+                <mandatory>true</mandatory>
+                <overrides>
+                    <parameter>FreeLingAnnotator.1/ReTokenizar</parameter>
+                </overrides>
+            </configurationParameter>
+            <configurationParameter>
+                <name>FreeLingAnnotator.PalabrasCompuestas.1</name>
+                <description>Detectar palabras compuestas en el texto.</description>
+                <type>Boolean</type>
+                <multiValued>false</multiValued>
+                <mandatory>true</mandatory>
+                <overrides>
+                    <parameter>FreeLingAnnotator.1/PalabrasCompuestas</parameter>
+                </overrides>
+            </configurationParameter>
+            <configurationParameter>
+                <name>FreeLingAnnotator.DetectarNumeros.1</name>
+                <description>Detectar numeros en el texto.</description>
+                <type>Boolean</type>
+                <multiValued>false</multiValued>
+                <mandatory>true</mandatory>
+                <overrides>
+                    <parameter>FreeLingAnnotator.1/DetectarNumeros</parameter>
+                </overrides>
+            </configurationParameter>
+            <configurationParameter>
+                <name>FreeLingAnnotator.DetectarPuntuacion.1</name>
+                <description>Detectar simbolos de puntuacion en el texto.</description>
+                <type>Boolean</type>
+                <multiValued>false</multiValued>
+                <mandatory>true</mandatory>
+                <overrides>
+                    <parameter>FreeLingAnnotator.1/DetectarPuntuacion</parameter>
+                </overrides>
+            </configurationParameter>
+            <configurationParameter>
+                <name>FreeLingAnnotator.DetectarFechas.1</name>
+                <description>Detectar fechas y horas en el texto.</description>
+                <type>Boolean</type>
+                <multiValued>false</multiValued>
+                <mandatory>true</mandatory>
+                <overrides>
+                    <parameter>FreeLingAnnotator.1/DetectarFechas</parameter>
+                </overrides>
+            </configurationParameter>
+            <configurationParameter>
+                <name>FreeLingAnnotator.DetectarCantidades.1</name>
+                <description>Detectar cantidades en el texto.</description>
+                <type>Boolean</type>
+                <multiValued>false</multiValued>
+                <mandatory>true</mandatory>
+                <overrides>
+                    <parameter>FreeLingAnnotator.1/DetectarCantidades</parameter>
+                </overrides>
+            </configurationParameter>
+        </configurationParameters>
+        <configurationParameterSettings>
+            <nameValuePair>
+                <name>Tokenizador.Lenguaje.0</name>
+                <value>
+                    <string>Español</string>
+                </value>
+            </nameValuePair>
+            <nameValuePair>
+                <name>FreeLingAnnotator.Lenguaje.1</name>
+                <value>
+                    <string>Español</string>
+                </value>
+            </nameValuePair>
+            <nameValuePair>
+                <name>FreeLingAnnotator.Tagger.1</name>
+                <value>
+                    <string>HMM</string>
+                </value>
+            </nameValuePair>
+            <nameValuePair>
+                <name>FreeLingAnnotator.ReTokenizar.1</name>
+                <value>
+                    <boolean>true</boolean>
+                </value>
+            </nameValuePair>
+            <nameValuePair>
+                <name>FreeLingAnnotator.PalabrasCompuestas.1</name>
+                <value>
+                    <boolean>true</boolean>
+                </value>
+            </nameValuePair>
+            <nameValuePair>
+                <name>FreeLingAnnotator.DetectarNumeros.1</name>
+                <value>
+                    <boolean>true</boolean>
+                </value>
+            </nameValuePair>
+            <nameValuePair>
+                <name>FreeLingAnnotator.DetectarPuntuacion.1</name>
+                <value>
+                    <boolean>true</boolean>
+                </value>
+            </nameValuePair>
+            <nameValuePair>
+                <name>FreeLingAnnotator.DetectarFechas.1</name>
+                <value>
+                    <boolean>true</boolean>
+                </value>
+            </nameValuePair>
+            <nameValuePair>
+                <name>FreeLingAnnotator.DetectarCantidades.1</name>
+                <value>
+                    <boolean>true</boolean>
+                </value>
+            </nameValuePair>
+        </configurationParameterSettings>
+        <flowConstraints>
+            <fixedFlow>
+                <node>Tokenizador.0</node>
+                <node>FreeLingAnnotator.1</node>
+                <node>ReglasContextuales.2</node>
+            </fixedFlow>
+        </flowConstraints>
+        <capabilities>
+            <capability>
+                <inputs/>
+                <outputs>
+                    <type allAnnotatorFeatures="true">com.engines.RCTag</type>
+                    <type allAnnotatorFeatures="true">com.engines.Token</type>
+                    <type allAnnotatorFeatures="true">com.engines.FLTag</type>
+                </outputs>
+                <languagesSupported/>
+            </capability>
+        </capabilities>
+        <operationalProperties>
+            <modifiesCas>true</modifiesCas>
+            <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+            <outputsNewCASes>false</outputsNewCASes>
+        </operationalProperties>
+    </analysisEngineMetaData>
+</analysisEngineDescription>

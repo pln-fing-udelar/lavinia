@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>true</primitive>
+  <annotatorImplementationName>com.engines.FreeLingAnnotator.FreeLingAnnotator</annotatorImplementationName>
+  <analysisEngineMetaData>
+    <name>com.engines.FreeLingAnnotator</name>
+    <description>Tagger de FreeLing</description>
+    <version>1.0</version>
+    <vendor>FreeLing</vendor>
+    <configurationParameters>
+      <configurationParameter>
+        <name>Lenguaje</name>
+        <description>Lenguaje del texto a analizar.</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+      <configurationParameter>
+        <name>Tagger</name>
+        <description>Tipo de tagger a utilizar. Puede ser utilizando Modelos de Markov Ocultos  o Etiquetado por Relajacion.</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+      <configurationParameter>
+        <name>ReTokenizar</name>
+        <description>Retokenizar luego de aplicar el tagger.</description>
+        <type>Boolean</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+      <configurationParameter>
+        <name>PalabrasCompuestas</name>
+        <description>Detectar palabras compuestas en el texto.</description>
+        <type>Boolean</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+      <configurationParameter>
+        <name>DetectarNumeros</name>
+        <description>Detectar numeros en el texto.</description>
+        <type>Boolean</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+      <configurationParameter>
+        <name>DetectarPuntuacion</name>
+        <description>Detectar simbolos de puntuacion en el texto.</description>
+        <type>Boolean</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+      <configurationParameter>
+        <name>DetectarFechas</name>
+        <description>Detectar fechas y horas en el texto.</description>
+        <type>Boolean</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+      <configurationParameter>
+        <name>DetectarCantidades</name>
+        <description>Detectar cantidades en el texto.</description>
+        <type>Boolean</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+    </configurationParameters>
+    <configurationParameterSettings />
+    <typeSystemDescription>
+      <name>FreeLingAnnotator.TypeSystem</name>
+      <description>TypeSystem</description>
+      <version>1.0</version>
+      <vendor>FreeLing</vendor>
+      <imports />
+      <types>
+        <typeDescription>
+          <name>com.engines.Token</name>
+          <description>Se requieren como entrada las anotaciones de tipo Token realizadas por un modulo Tokenizador.</description>
+          <supertypeName>uima.tcas.Annotation</supertypeName>
+          <features />
+        </typeDescription>
+        <typeDescription>
+          <name>com.engines.FLTag</name>
+          <description />
+          <supertypeName>uima.tcas.Annotation</supertypeName>
+          <features>
+            <featureDescription>
+              <name>Etiqueta</name>
+              <description />
+              <rangeTypeName>uima.cas.String</rangeTypeName>
+              <multipleReferencesAllowed>true</multipleReferencesAllowed>
+            </featureDescription>
+            <featureDescription>
+              <name>Lema</name>
+              <description />
+              <rangeTypeName>uima.cas.String</rangeTypeName>
+              <multipleReferencesAllowed>true</multipleReferencesAllowed>
+            </featureDescription>
+          </features>
+        </typeDescription>
+      </types>
+    </typeSystemDescription>
+    <capabilities>
+      <capability>
+        <inputs>
+          <type allAnnotatorFeatures="true">com.engines.Token</type>
+        </inputs>
+        <outputs>
+          <type allAnnotatorFeatures="true">com.engines.FLTag</type>
+        </outputs>
+        <languagesSupported />
+        <inputSofas />
+        <outputSofas />
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <externalResourceDependencies>
+    <externalResourceDependency>
+      <key>FreeLingExe</key>
+      <description>Ruta al ejecutable de FreeLing</description>
+      <interfaceName />
+      <optional>false</optional>
+    </externalResourceDependency>
+    <externalResourceDependency>
+      <key>FreeLingConfEsp</key>
+      <description>Archivo de configuracion de FreeLing para espaniol.</description>
+      <interfaceName />
+      <optional>false</optional>
+    </externalResourceDependency>
+    <externalResourceDependency>
+      <key>FreeLingConfEng</key>
+      <description>Archivo de configuracion de FreeLing para ingles.</description>
+      <interfaceName />
+      <optional>false</optional>
+    </externalResourceDependency>
+    <externalResourceDependency>
+      <key>FreeLingConfIt</key>
+      <description>Archivo de configuracion de FreeLing para italiano.</description>
+      <interfaceName />
+      <optional>false</optional>
+    </externalResourceDependency>
+    <externalResourceDependency>
+      <key>FreeLingConfCat</key>
+      <description>Archivo de configuracion de FreeLing para catalan.</description>
+      <interfaceName />
+      <optional>false</optional>
+    </externalResourceDependency>
+  </externalResourceDependencies>
+  <resourceManagerConfiguration>
+    <externalResources>
+      <externalResource>
+        <name>FreeLingExe</name>
+        <description>Ruta al ejecutable de FreeLing</description>
+        <fileResourceSpecifier>
+          <fileUrl>file:/C:/FreeLing-1.4/analyzer.exe</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName />
+      </externalResource>
+      <externalResource>
+        <name>FreeLingConfEsp</name>
+        <description>Archivo de configuracion de FreeLing para espaniol.</description>
+        <fileResourceSpecifier>
+          <fileUrl>file:/C:/FreeLing-1.4/data/config/es.cfg</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName />
+      </externalResource>
+      <externalResource>
+        <name>FreeLingConfEng</name>
+        <description>Archivo de configuracion de FreeLing para ingles.</description>
+        <fileResourceSpecifier>
+          <fileUrl>file:/C:/FreeLing-1.4/data/config/en.cfg</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName />
+      </externalResource>
+      <externalResource>
+        <name>FreeLingConfIt</name>
+        <description>Archivo de configuracion de FreeLing para italiano.</description>
+        <fileResourceSpecifier>
+          <fileUrl>file:/C:/FreeLing-1.4/data/config/it.cfg</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName />
+      </externalResource>
+      <externalResource>
+        <name>FreeLingConfCat</name>
+        <description>Archivo de configuracion de FreeLing para catalan.</description>
+        <fileResourceSpecifier>
+          <fileUrl>file:/C:/FreeLing-1.4/data/config/ca.cfg</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName />
+      </externalResource>
+    </externalResources>
+    <externalResourceBindings>
+      <externalResourceBinding>
+        <key>FreeLingExe</key>
+        <resourceName>FreeLingExe</resourceName>
+      </externalResourceBinding>
+      <externalResourceBinding>
+        <key>FreeLingConfEsp</key>
+        <resourceName>FreeLingConfEsp</resourceName>
+      </externalResourceBinding>
+      <externalResourceBinding>
+        <key>FreeLingConfEng</key>
+        <resourceName>FreeLingConfEng</resourceName>
+      </externalResourceBinding>
+      <externalResourceBinding>
+        <key>FreeLingConfIt</key>
+        <resourceName>FreeLingConfIt</resourceName>
+      </externalResourceBinding>
+      <externalResourceBinding>
+        <key>FreeLingConfCat</key>
+        <resourceName>FreeLingConfCat</resourceName>
+      </externalResourceBinding>
+    </externalResourceBindings>
+  </resourceManagerConfiguration>
+</analysisEngineDescription>
+

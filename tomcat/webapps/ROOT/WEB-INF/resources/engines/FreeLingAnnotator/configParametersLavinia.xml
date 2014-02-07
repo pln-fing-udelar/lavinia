@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configParametersLavinia>
+  <nameValuePair>
+    <name>Lenguaje</name>
+    <value>
+      <array>
+        <string>Español</string>
+        <string>Inglés</string>
+        <string>Catalán</string>
+        <string>Italiano</string>
+      </array>
+    </value>
+  </nameValuePair>
+  <nameValuePair>
+    <name>Tagger</name>
+    <value>
+      <array>
+        <string>HMM</string>
+        <string>Relaxation</string>
+      </array>
+    </value>
+  </nameValuePair>
+</configParametersLavinia>
+

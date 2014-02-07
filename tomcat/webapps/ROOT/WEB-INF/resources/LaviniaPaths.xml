@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<paths>
+  <LAVINIA_PATH description="" externo="false">/Z:/gwt-windows-1.2.22/Lavinia/tomcat/webapps/ROOT/</LAVINIA_PATH>
+  <FreeLingExe description="Ruta al archivo ejecutable de FreeLing" externo="true">C:/FreeLing-1.4/analyzer.exe</FreeLingExe>
+  <FreeLingConfEsp description="Archivo de configuracion de FreeLing para espaniol." externo="true">C:/FreeLing-1.4/data/config/es.cfg</FreeLingConfEsp>
+  <FreeLingConfEng description="Archivo de configuracion de FreeLing para ingles." externo="true">C:/FreeLing-1.4/data/config/en.cfg</FreeLingConfEng>
+  <FreeLingConfIt description="Archivo de configuracion de FreeLing para italiano." externo="true">C:/FreeLing-1.4/data/config/it.cfg</FreeLingConfIt>
+  <FreeLingConfCat description="Archivo de configuracion de FreeLing para catalan." externo="true">C:/FreeLing-1.4/data/config/ca.cfg</FreeLingConfCat>
+  <EditorRC description="editor de reglas contextuales" externo="true">Z:/editorRC2/paraLavinia.pl</EditorRC>
+  <PrologExe description="Ruta al archivo ejecutable &quot;plcon&quot; de prolog." externo="true">C:/Program Files/pl/bin/plcon.exe</PrologExe>
+</paths>
+

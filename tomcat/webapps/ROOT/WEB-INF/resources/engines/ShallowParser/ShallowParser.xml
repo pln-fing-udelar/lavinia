@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>true</primitive>
+  <annotatorImplementationName>com.engines.ShallowParser.ShallowParser</annotatorImplementationName>
+  <analysisEngineMetaData>
+    <name>com.engines.ShallowParser</name>
+    <description>Encapsula el parser de Freeling</description>
+    <version>1.0</version>
+    <vendor>Cecilia Techera</vendor>
+    <configurationParameters>
+      <configurationParameter>
+        <name>Lenguaje</name>
+        <description>Lenguaje del texto a analizar</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+    </configurationParameters>
+    <configurationParameterSettings />
+    <typeSystemDescription>
+      <name>ShallowParser.TypeSystem</name>
+      <description>TypeSystem</description>
+      <version>1.0</version>
+      <vendor>Cecilia Techera</vendor>
+      <imports />
+      <types>
+        <typeDescription>
+          <name>com.engines.FLTag</name>
+          <description />
+          <supertypeName>uima.tcas.Annotation</supertypeName>
+          <features>
+            <featureDescription>
+              <name>Etiqueta</name>
+              <description />
+              <rangeTypeName>uima.cas.String</rangeTypeName>
+              <multipleReferencesAllowed>true</multipleReferencesAllowed>
+            </featureDescription>
+            <featureDescription>
+              <name>Lema</name>
+              <description />
+              <rangeTypeName>uima.cas.String</rangeTypeName>
+              <multipleReferencesAllowed>true</multipleReferencesAllowed>
+            </featureDescription>
+          </features>
+        </typeDescription>
+        <typeDescription>
+          <name>com.engines.Nivel_0</name>
+          <description />
+          <supertypeName>uima.tcas.Annotation</supertypeName>
+          <features>
+            <featureDescription>
+              <name>Etiqueta</name>
+              <description />
+              <rangeTypeName>uima.cas.String</rangeTypeName>
+              <multipleReferencesAllowed>true</multipleReferencesAllowed>
+            </featureDescription>
+          </features>
+        </typeDescription>
+		 <typeDescription>
+          <name>com.engines.Nivel_1</name>
+          <description />
+          <supertypeName>uima.tcas.Annotation</supertypeName>
+          <features>
+            <featureDescription>
+              <name>Etiqueta</name>
+              <description />
+              <rangeTypeName>uima.cas.String</rangeTypeName>
+              <multipleReferencesAllowed>true</multipleReferencesAllowed>
+            </featureDescription>
+          </features>
+        </typeDescription>
+		 <typeDescription>
+          <name>com.engines.Nivel_2</name>
+          <description />
+          <supertypeName>uima.tcas.Annotation</supertypeName>
+          <features>
+            <featureDescription>
+              <name>Etiqueta</name>
+              <description />
+              <rangeTypeName>uima.cas.String</rangeTypeName>
+              <multipleReferencesAllowed>true</multipleReferencesAllowed>
+            </featureDescription>
+          </features>
+        </typeDescription>
+		 <typeDescription>
+          <name>com.engines.Nivel_3</name>
+          <description />
+          <supertypeName>uima.tcas.Annotation</supertypeName>
+          <features>
+            <featureDescription>
+              <name>Etiqueta</name>
+              <description />
+              <rangeTypeName>uima.cas.String</rangeTypeName>
+              <multipleReferencesAllowed>true</multipleReferencesAllowed>
+            </featureDescription>
+          </features>
+        </typeDescription>
+		 <typeDescription>
+          <name>com.engines.Nivel_4</name>
+          <description />
+          <supertypeName>uima.tcas.Annotation</supertypeName>
+          <features>
+            <featureDescription>
+              <name>Etiqueta</name>
+              <description />
+              <rangeTypeName>uima.cas.String</rangeTypeName>
+              <multipleReferencesAllowed>true</multipleReferencesAllowed>
+            </featureDescription>
+          </features>
+        </typeDescription>
+		 <typeDescription>
+          <name>com.engines.Nivel_5</name>
+          <description />
+          <supertypeName>uima.tcas.Annotation</supertypeName>
+          <features>
+            <featureDescription>
+              <name>Etiqueta</name>
+              <description />
+              <rangeTypeName>uima.cas.String</rangeTypeName>
+              <multipleReferencesAllowed>true</multipleReferencesAllowed>
+            </featureDescription>
+          </features>
+        </typeDescription>
+		 <typeDescription>
+          <name>com.engines.Nivel_6</name>
+          <description />
+          <supertypeName>uima.tcas.Annotation</supertypeName>
+          <features>
+            <featureDescription>
+              <name>Etiqueta</name>
+              <description />
+              <rangeTypeName>uima.cas.String</rangeTypeName>
+              <multipleReferencesAllowed>true</multipleReferencesAllowed>
+            </featureDescription>
+          </features>
+        </typeDescription>
+		 <typeDescription>
+          <name>com.engines.Nivel_7</name>
+          <description />
+          <supertypeName>uima.tcas.Annotation</supertypeName>
+          <features>
+            <featureDescription>
+              <name>Etiqueta</name>
+              <description />
+              <rangeTypeName>uima.cas.String</rangeTypeName>
+              <multipleReferencesAllowed>true</multipleReferencesAllowed>
+            </featureDescription>
+          </features>
+        </typeDescription>
+		 <typeDescription>
+          <name>com.engines.Nivel_8mas</name>
+          <description />
+          <supertypeName>uima.tcas.Annotation</supertypeName>
+          <features>
+            <featureDescription>
+              <name>Etiqueta</name>
+              <description />
+              <rangeTypeName>uima.cas.String</rangeTypeName>
+              <multipleReferencesAllowed>true</multipleReferencesAllowed>
+            </featureDescription>
+          </features>
+        </typeDescription>
+      </types>
+    </typeSystemDescription>
+    <capabilities>
+      <capability>
+        <inputs>
+          <type allAnnotatorFeatures="true">com.engines.FLTag</type>
+        </inputs>
+        <outputs>
+          <type allAnnotatorFeatures="true">com.engines.Nivel_0</type>
+		  <type allAnnotatorFeatures="true">com.engines.Nivel_1</type>
+		  <type allAnnotatorFeatures="true">com.engines.Nivel_2</type>
+		  <type allAnnotatorFeatures="true">com.engines.Nivel_3</type>
+		  <type allAnnotatorFeatures="true">com.engines.Nivel_4</type>
+		  <type allAnnotatorFeatures="true">com.engines.Nivel_5</type>
+		  <type allAnnotatorFeatures="true">com.engines.Nivel_6</type>
+		  <type allAnnotatorFeatures="true">com.engines.Nivel_7</type>
+		  <type allAnnotatorFeatures="true">com.engines.Nivel_8mas</type>
+        </outputs>
+        <languagesSupported />
+        <inputSofas />
+        <outputSofas />
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <externalResourceDependencies>
+    <externalResourceDependency>
+      <key>FreeLingExe</key>
+      <description>Ruta al archivo ejecutable de FreeLing</description>
+      <interfaceName />
+      <optional>false</optional>
+    </externalResourceDependency>
+    <externalResourceDependency>
+      <key>FreeLingConfEsp</key>
+      <description>Archivo de configuracion de FreeLing para espaniol.</description>
+      <interfaceName />
+      <optional>false</optional>
+    </externalResourceDependency>
+    <externalResourceDependency>
+      <key>FreeLingConfEng</key>
+      <description>Archivo de configuracion de FreeLing para ingles.</description>
+      <interfaceName />
+      <optional>false</optional>
+    </externalResourceDependency>
+    <externalResourceDependency>
+      <key>FreeLingConfIt</key>
+      <description>Archivo de configuracion de FreeLing para italiano.</description>
+      <interfaceName />
+      <optional>false</optional>
+    </externalResourceDependency>
+    <externalResourceDependency>
+      <key>FreeLingConfCat</key>
+      <description>Archivo de configuracion de FreeLing para catalan.</description>
+      <interfaceName />
+      <optional>false</optional>
+    </externalResourceDependency>
+  </externalResourceDependencies>
+  <resourceManagerConfiguration>
+    <externalResources>
+      <externalResource>
+        <name>FreeLingExe</name>
+        <description>Ruta al archivo ejecutable de FreeLing</description>
+        <fileResourceSpecifier>
+          <fileUrl>file:/C:/FreeLing-1.4/analyzer.exe</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName />
+      </externalResource>
+      <externalResource>
+        <name>FreeLingConfEsp</name>
+        <description>Archivo de configuracion de FreeLing para espaniol.</description>
+        <fileResourceSpecifier>
+          <fileUrl>file:/C:/FreeLing-1.4/data/config/es.cfg</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName />
+      </externalResource>
+      <externalResource>
+        <name>FreeLingConfEng</name>
+        <description>Archivo de configuracion de FreeLing para ingles.</description>
+        <fileResourceSpecifier>
+          <fileUrl>file:/C:/FreeLing-1.4/data/config/en.cfg</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName />
+      </externalResource>
+      <externalResource>
+        <name>FreeLingConfIt</name>
+        <description>Archivo de configuracion de FreeLing para italiano.</description>
+        <fileResourceSpecifier>
+          <fileUrl>file:/C:/FreeLing-1.4/data/config/it.cfg</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName />
+      </externalResource>
+      <externalResource>
+        <name>FreeLingConfCat</name>
+        <description>Archivo de configuracion de FreeLing para catalan.</description>
+        <fileResourceSpecifier>
+          <fileUrl>file:/C:/FreeLing-1.4/data/config/ca.cfg</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName />
+      </externalResource>
+    </externalResources>
+    <externalResourceBindings>
+      <externalResourceBinding>
+        <key>FreeLingExe</key>
+        <resourceName>FreeLingExe</resourceName>
+      </externalResourceBinding>
+      <externalResourceBinding>
+        <key>FreeLingConfEsp</key>
+        <resourceName>FreeLingConfEsp</resourceName>
+      </externalResourceBinding>
+      <externalResourceBinding>
+        <key>FreeLingConfEng</key>
+        <resourceName>FreeLingConfEng</resourceName>
+      </externalResourceBinding>
+      <externalResourceBinding>
+        <key>FreeLingConfIt</key>
+        <resourceName>FreeLingConfIt</resourceName>
+      </externalResourceBinding>
+      <externalResourceBinding>
+        <key>FreeLingConfCat</key>
+        <resourceName>FreeLingConfCat</resourceName>
+      </externalResourceBinding>
+    </externalResourceBindings>
+  </resourceManagerConfiguration>
+</analysisEngineDescription>
+

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>true</primitive>
+  <annotatorImplementationName>com.engines.ReglasContextuales.ReglasContextuales</annotatorImplementationName>
+  <analysisEngineMetaData>
+    <name>com.engines.ReglasContextuales</name>
+    <description>Encapsula el editor de reglas contextuales de Diego.</description>
+    <version>1.0</version>
+    <vendor>Cecilia</vendor>
+    <configurationParameters />
+    <configurationParameterSettings />
+    <typeSystemDescription>
+      <name>ReglasContextuales.TypeSystem</name>
+      <description>TypeSystem</description>
+      <version>1.0</version>
+      <vendor>Cecilia</vendor>
+      <imports />
+      <types>
+        <typeDescription>
+          <name>com.engines.FLTag</name>
+          <description />
+          <supertypeName>uima.tcas.Annotation</supertypeName>
+          <features>
+            <featureDescription>
+              <name>Etiqueta</name>
+              <description />
+              <rangeTypeName>uima.cas.String</rangeTypeName>
+              <multipleReferencesAllowed>true</multipleReferencesAllowed>
+            </featureDescription>
+            <featureDescription>
+              <name>Lema</name>
+              <description />
+              <rangeTypeName>uima.cas.String</rangeTypeName>
+              <multipleReferencesAllowed>true</multipleReferencesAllowed>
+            </featureDescription>
+          </features>
+        </typeDescription>
+        <typeDescription>
+          <name>com.engines.RCTag</name>
+          <description>etiqueta regla contextual</description>
+          <supertypeName>uima.tcas.Annotation</supertypeName>
+          <features>
+            <featureDescription>
+              <name>Tipo</name>
+              <description />
+              <rangeTypeName>uima.cas.String</rangeTypeName>
+              <multipleReferencesAllowed>true</multipleReferencesAllowed>
+            </featureDescription>
+            <featureDescription>
+              <name>Atributos</name>
+              <description />
+              <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+              <elementType>uima.cas.String</elementType>
+              <multipleReferencesAllowed>true</multipleReferencesAllowed>
+            </featureDescription>
+          </features>
+        </typeDescription>
+      </types>
+    </typeSystemDescription>
+    <capabilities>
+      <capability>
+        <inputs>
+          <type allAnnotatorFeatures="true">com.engines.FLTag</type>
+        </inputs>
+        <outputs>
+          <type allAnnotatorFeatures="true">com.engines.RCTag</type>
+        </outputs>
+        <languagesSupported />
+        <inputSofas />
+        <outputSofas />
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <externalResourceDependencies>
+    <externalResourceDependency>
+      <key>EditorRC</key>
+      <description>editor de reglas contextuales</description>
+      <interfaceName />
+      <optional>false</optional>
+    </externalResourceDependency>
+    <externalResourceDependency>
+      <key>PrologExe</key>
+      <description>Ruta al archivo ejecutable "plcon" de prolog.</description>
+      <interfaceName />
+      <optional>false</optional>
+    </externalResourceDependency>
+  </externalResourceDependencies>
+  <resourceManagerConfiguration>
+    <externalResources>
+      <externalResource>
+        <name>EditorRC</name>
+        <description>editor de reglas contextuales</description>
+        <fileResourceSpecifier>
+          <fileUrl>file:/Z:/editorRC2/paraLavinia.pl</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName />
+      </externalResource>
+      <externalResource>
+        <name>PrologExe</name>
+        <description>Ruta al archivo ejecutable "plcon" de prolog.</description>
+        <fileResourceSpecifier>
+          <fileUrl>file:/C:/Program Files/pl/bin/plcon.exe</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName />
+      </externalResource>
+      <externalResource>
+        <name>Reglas</name>
+        <description>archivo con las reglas</description>
+        <fileResourceSpecifier>
+          <fileUrl>DYNAMIC</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName />
+      </externalResource>
+      <externalResource>
+        <name>Condiciones</name>
+        <description>archivo prolog con condiciones</description>
+        <fileResourceSpecifier>
+          <fileUrl>DYNAMIC</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName />
+      </externalResource>
+    </externalResources>
+    <externalResourceBindings>
+      <externalResourceBinding>
+        <key>EditorRC</key>
+        <resourceName>EditorRC</resourceName>
+      </externalResourceBinding>
+      <externalResourceBinding>
+        <key>PrologExe</key>
+        <resourceName>PrologExe</resourceName>
+      </externalResourceBinding>
+      <externalResourceBinding>
+        <key>Reglas</key>
+        <resourceName>Reglas</resourceName>
+      </externalResourceBinding>
+      <externalResourceBinding>
+        <key>Condiciones</key>
+        <resourceName>Condiciones</resourceName>
+      </externalResourceBinding>
+    </externalResourceBindings>
+  </resourceManagerConfiguration>
+</analysisEngineDescription>
+
