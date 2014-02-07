@@ -17,4 +17,11 @@ Si utiliza Lavinia, por favor cite el siguiente artículo:
 
 Cecilia Techera, Diego Garat, Guillermo Moncecchi "Lavinia: un Entorno para Procesamiento de Lenguaje Natural", Setiembre de 2009 - 7th Brazilian Symposium in Information and Human Language Technology
 
+Módulos ya implementados
+========================
 
+- Tokenizador: basado en la suite de herramientas Freeling para PLN. Disponible para español, inglés, catalán e italiano.
+- POS Tagger: basado en la suite de herramientas Freeling para PLN. Disponible para español, inglés, catalán e italiano. Incluye reconocimiento de POS Tags, Números, Fechas, Cantidades y Palabras Compuestas.
+- Sentence Splitter: separador del texto en oraciones, basado en al suite de herramientas Freeling para PLN. Disponible para español, inglés, catalán e italiano.
+- Shallow Parser: análisis superficial de textos, basado en la suite de herramientas Freeling para PLN. Disponible para español, inglés, catalán e italiano.
+- Analizador de Reglas Contextuales: basado en un analizador en Prolog del formalismo de Reglas Contextuales, desarrollado por el grupo PLN del InCo. Recibe un conjunto de reglas contextuales, y un texto con etiquetas de POS y devuelve texto marcado, resultado de su aplicación.
