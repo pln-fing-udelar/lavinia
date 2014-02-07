@@ -1,0 +1,13 @@
+modulo# sn.
+
+sn01# [sn,sn01,Tipo,Lema] => >> ['N',_,Lema,Tipo|_] << .
+sn03# [sn,sn03,Tipo,Lema] => >> [sn,_,Tipo,Lema|_], ['A'|_] << .
+sn04# [sn,sn04,Tipo,Lema] => >> ['D'|_], op(['A'|_]), [sn,_,Tipo,Lema|_] << .
+sn05# [sn,sn05,Tipo,Lema] => >> [sn,_,Tipo,Lema|_], ['S',_,'de'|_], [sn|_] << .
+
+modulo# np.
+np01# [np,np01,general] => >> [sn,_,'P'|_] << .
+np02# [np,np02,persona] => >> [np,_,'general'|_], op(['F',_,','|_]), [sn,_,'C',LemaT] << // titulo(LemaT) .
+np03# [np,np03,persona] => >> [sn,_,_,LemaT], op(['F',_,','|_]), [np,_,'general'|_] << // titulo(LemaT) .
+np04# [np,np04,lugar] => ['S',_,'en'|_] >> [np,_,'general'|_] << .
+np05# [np,np05,lugar] => ['V',_,LemaV|_], ['S',_,'a'|_] >> [np,_,'general'|_] << // verboIr(LemaV) .
